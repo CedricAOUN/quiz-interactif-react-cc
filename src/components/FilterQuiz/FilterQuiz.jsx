@@ -5,17 +5,19 @@ import { useContext } from 'react';
 const FilterQuiz = () => {
   const { category, dispatch } = useContext(QuizContext);
 
-  const handleCategoryChange = (newCategory) => {
+  const handleCategoryChange = (category) => {
     dispatch({
       type: 'CHANGE_CATEGORY',
-      payload: newCategory,
+      payload: {
+        category
+      },
     })
   }
 
   return (
     <Form.Select 
       aria-label="Default select example" 
-      value={category} 
+      value={category}
       onChange={(e) => handleCategoryChange(e.target.value)}
     >
       <option value="all">Toutes</option>

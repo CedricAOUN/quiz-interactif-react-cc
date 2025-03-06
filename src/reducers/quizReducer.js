@@ -29,7 +29,7 @@ export const quizReducer = (state, action) => {
     case "CHANGE_CATEGORY":
       return {
         ...state,
-        category: action.payload,
+        category: action.payload.category,
       };
     case "VALIDATE":
       return {
