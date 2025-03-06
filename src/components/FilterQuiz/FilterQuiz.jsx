@@ -19,9 +19,9 @@ const FilterQuiz = () => {
       onChange={(e) => handleCategoryChange(e.target.value)}
     >
       <option value="all">Toutes</option>
-      <option value="math">Math</option>
-      <option value="geo">Geographie</option>
-      <option value="misc">Misc.</option>
+      <option value="Math">Math</option>
+      <option value="Science">Science</option>
+      <option value="Histoire">Histoire</option>
     </Form.Select>
   )
 }

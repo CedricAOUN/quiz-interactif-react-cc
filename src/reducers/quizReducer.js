@@ -27,9 +27,13 @@ export const initialState = { category: 'all', questions: QUESTIONS };
 export const quizReducer = (state, action) => {
   switch (action.type) {
     case "CHANGE_CATEGORY":
-      return { category: action.payload };
+      return {
+        ...state,
+        category: action.payload,
+      };
     case "VALIDATE":
       return {
+        ...state,
         questions: state.questions.map((quest) =>
           quest.id === action.payload.id
             ? { ...quest, validation: action.payload.userChoice }
