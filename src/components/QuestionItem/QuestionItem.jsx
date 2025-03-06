@@ -36,8 +36,8 @@ const QuestionItem = ({ questionObject }) => {
         <Card.Body>
           <Card.Title>Reponse</Card.Title>
           <Card.Text>{answer}</Card.Text>
-          <Button className='mx-1' variant="success" onClick={() => handleUserChoice(id, true)}>Juste</Button>
-          <Button className='mx-1' variant="danger" onClick={() => handleUserChoice(id, false)}>Fausse</Button>
+          <Button className='mx-1' variant="success" onClick={() => handleUserChoice(id, true)} disabled={showValidation}>Juste</Button>
+          <Button className='mx-1' variant="danger" onClick={() => handleUserChoice(id, false)} disabled={showValidation}>Fausse</Button>
         </Card.Body>
       </Card>
     </Accordion.Body>
