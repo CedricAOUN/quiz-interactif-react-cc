@@ -4,10 +4,10 @@ import { initialState, quizReducer } from "../reducers/quizReducer";
 export const QuizContext = createContext();
 
 export const QuizProvider = ({ children }) => {
-  const [category, questions, dispatch ] = useReducer(quizReducer, initialState);
+  const [state, dispatch] = useReducer(quizReducer, initialState);
 
   return (
-    <QuizContext.Provider value={{ category, questions, dispatch }}>
+    <QuizContext.Provider value={{ category: state.category, questions: state.questions, dispatch }}>
       {children}
     </QuizContext.Provider>
   );

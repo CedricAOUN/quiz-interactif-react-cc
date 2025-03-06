@@ -3,7 +3,14 @@ import { QuizContext } from '../../context/QuizContext'
 import { useContext } from 'react';
 
 const FilterQuiz = () => {
-  const { category, handleCategoryChange } = useContext(QuizContext);
+  const { category, dispatch } = useContext(QuizContext);
+
+  const handleCategoryChange = (newCategory) => {
+    dispatch({
+      type: 'CHANGE_CATEGORY',
+      payload: newCategory,
+    })
+  }
 
   return (
     <Form.Select 
