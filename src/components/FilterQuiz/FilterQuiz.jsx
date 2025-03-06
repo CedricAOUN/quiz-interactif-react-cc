@@ -16,7 +16,6 @@ const FilterQuiz = () => {
 
   return (
     <Form.Select 
-      aria-label="Default select example" 
       value={category}
       onChange={(e) => handleCategoryChange(e.target.value)}
     >

@@ -9,8 +9,8 @@ function QuizAccordion() {
   const filteredQuestions = category !== 'all' ? questions.filter(quest => quest.category == category) : questions;
 
   return (
-    <Accordion defaultActiveKey="0">
-      {filteredQuestions.map(quest => <QuestionItem questionObject={quest} key={quest.id} />)}
+    <Accordion>
+      {filteredQuestions.map(question => <QuestionItem questionObject={question} key={question.id} />)}
     </Accordion>
   )
 }
