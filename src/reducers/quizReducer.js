@@ -35,7 +35,7 @@ export const quizReducer = (state, action) => {
       return {
         ...state,
         questions: state.questions.map((quest) =>
-          quest.id === action.payload.id
+          quest.id === action.payload.id && quest.validation === null
             ? { ...quest, validation: action.payload.userChoice }
             : quest
         ),
